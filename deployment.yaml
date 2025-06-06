@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: httpbin
-        image: kennethreitz/httpbin
+        image: mccutchen/go-httpbin
         ports:
         - containerPort: 80
         env:
