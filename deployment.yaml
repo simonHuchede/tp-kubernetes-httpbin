@@ -18,3 +18,9 @@ spec:
         image: kennethreitz/httpbin
         ports:
         - containerPort: 80
+        env:
+        - name: MODE
+          valueFrom:
+            configMapKeyRef:
+              name: httpbin-config
+              key: MODE
