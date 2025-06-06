@@ -24,3 +24,9 @@ spec:
             configMapKeyRef:
               name: httpbin-config
               key: MODE
+        livenessProbe:
+          httpGet:
+            path: /status/200
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 10
